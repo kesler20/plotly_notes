@@ -77,7 +77,7 @@ var trace4 = {
 ### Barcharts
 to initialise a bar chart you can specify the width and the type to be  "bar"
 the following image shows how multiople traces are rendered side by side. to change the orientation of a barchart you can use the ``orientation: 'h'`` property in the trace object
-![[Pasted image 20221017175637.png]]
+![](/Pasted%20image%2020221017175637.png "on mouse hover")
 ```javascript
 
 var trace1 = {
@@ -96,7 +96,7 @@ By changing opacity you can make the other one fade
 ```javascript
 var xValue = ['Product A', 'Product B', 'Product C'];
 var yValue = [20, 14, 23];
-var yValue2 = [24, 16, 20];]
+var yValue2 = [24, 16, 20];
 var trace1 = {
   x: xValue,
   y: yValue,
@@ -132,7 +132,7 @@ var data = [trace1,trace2];
 var layout = {
   title: 'January 2013 Sales Report'
 };
-Plotly.newPlot('myDiv', data, layout);]
+Plotly.newPlot('myDiv', data, layout);
 ```
 
 you can also cxhange the color of a specific value within the trace to show that a value has been selected
