@@ -1,7 +1,7 @@
 # plotly_notes
 
 Plolty is a javascript library which uses d3 to build cool graphs
-![](/plotly.png)
+![](/plotly.png)(https://github.com/plotly/plotly.js)   
 
 ## How is plotly structured
 
