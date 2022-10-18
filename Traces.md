@@ -92,7 +92,7 @@ var trace1 = {
 ```
 
 By changing opacity you can make the other one fade
-![[Pasted image 20221017175910.png]]
+![](/Pasted%20image%2020221017175910.png)
 ```javascript
 var xValue = ['Product A', 'Product B', 'Product C'];
 var yValue = [20, 14, 23];
@@ -136,10 +136,10 @@ Plotly.newPlot('myDiv', data, layout);
 ```
 
 you can also cxhange the color of a specific value within the trace to show that a value has been selected
-![[Pasted image 20221017180020.png]]
+![](/Pasted%20image%2020221017180020.png)
 
 Example of negative and posuitive bars
-![[Pasted image 20221017180107.png]]
+![](/Pasted%20image%2020221017180107.png)
 ```javascript
 var data = [
   {
@@ -182,7 +182,7 @@ const trace = {
 ```
 
 finally the different colors cna also highlight two different traces
-![[Pasted image 20221017180404.png]]
+![](/Pasted%20image%2020221017180404.png)
 ```javascript
 var trace1 = {
   x: [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012],
@@ -237,7 +237,7 @@ Plotly.newPlot('myDiv', data, layout);
 #### Symmetric error bars
 for error bars thye following simple code cna be applied
 making the color of the line different to the error bars may generate cool visualisations
-![[Pasted image 20221017180658.png]]
+![](/Pasted%20image%2020221017180658.png)
 ```javascript
 var data = [
   {
@@ -276,7 +276,7 @@ Plotly.newPlot('myDiv', data);
 #### Box Plots
 
 the following box plot when you hover it gives cool information about median mean and other measures of spread, __to color boxplots you need make the marker color different__
-![[Pasted image 20221017180942.png]]
+![](/Pasted%20image%2020221017180942.png)
 ```javascript
 var y0 = [];
 var y1 = [];
@@ -301,7 +301,7 @@ Plotly.newPlot('myDiv', data);
 
 ```
 The following box plot shows the underlying data
-![[Pasted image 20221017181052.png]]
+![](/Pasted%20image%2020221017181052.png)
 ```javascript
 
 var data = [
@@ -318,7 +318,7 @@ Plotly.newPlot('myDiv', data);
 
 ```
 Horizontal box plots instead look like the following
-![[Pasted image 20221017181257.png]]
+![](/Pasted%20image%2020221017181257.png)
 ```javascript
 var trace1 = {
   x: [1, 2, 3, 4, 4, 4, 8, 9, 10],
@@ -341,7 +341,7 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 ```
 The following example shows how to style outliers using box plots, in this case the oputliers are styled in red
-![[Pasted image 20221017181725.png]]
+![](/Pasted%20image%2020221017181725.png)
 ```javascript
 var trace1 = {
   y: [0.75, 5.25, 5.5, 6, 6.2, 6.6, 6.80, 7.0, 7.2, 7.5, 7.5, 7.75, 8.15, 8.15, 8.65, 8.93, 9.2, 9.5, 10, 10.25, 11.5, 12, 16, 20.90, 22.3, 23.25],
@@ -403,7 +403,7 @@ Plotly.newPlot('myDiv', data, layout);
 ```
 #### Histograms
 histograms can be mainly represented as stacked or overlapping
-the following is an example of an overlapping histogram![[Pasted image 20221017182434.png]]
+the following is an example of an overlapping histogram![](/Pasted%20image%2020221017182434.png)
 ```javascript
 var x1 = [];
 var x2 = [];
@@ -436,7 +436,7 @@ Plotly.newPlot('myDiv', data, layout);
 
 ```
 Whereas a histogram which is stacked may represented as follows
-![[Pasted image 20221017182454.png]]
+![](/Pasted%20image%2020221017182454.png)
 ```javascript
 var x1 = [];
 var x2 = [];
@@ -458,7 +458,7 @@ var layout = {barmode: "stack"};
 Plotly.newPlot('myDiv', data, layout);
 
 ```
-finally histograms can also be represented horizontally![[Pasted image 20221017182707.png]]
+finally histograms can also be represented horizontally![](/Pasted%20image%2020221017182707.png)
 ```javascript
 var y = [];
 for (var i = 0; i < 500; i ++) {
@@ -479,7 +479,7 @@ Plotly.newPlot('myDiv', data);
 ```
 #### Histogram 2D Contours
 The following code can produce the contours shown below
-![[Pasted image 20221017183123.png]]
+![](/Pasted%20image%2020221017183123.png)
 ```javascript
 // from http://bl.ocks.org/mbostock/4349187
 // Sample from a normal distribution with mean 0, stddev 1.
@@ -580,7 +580,7 @@ Plotly.newPlot('myDiv', data, layout);
 
 ```
 ### Statistical Error plots like SEEQs
-![[Pasted image 20221017183319.png]]
+![](/Pasted%20image%2020221017183319.png)
 ```javascript
 function random_date(start, end, mul) 
   {
@@ -651,7 +651,7 @@ Plotly.newPlot('myDiv', data, layout);
 ```
 #### Contours 
 the plots with type contour will generate the following plots
-![[Pasted image 20221017193349.png]]
+![](/Pasted%20image%2020221017193349.png)
 ```javascript
 var size = 100, x = new Array(size), y = new Array(size), z = new Array(size), i, j;
 
@@ -678,7 +678,7 @@ var data = [ {
 Plotly.newPlot('myDiv', data);
 ```
 #### smoothing color for contour
-![[Pasted image 20221017193517.png]]
+![](/Pasted%20image%2020221017193517.png)
 ```javascript
 var data = [ {
   z: [[10, 10.625, 12.5, 15.625, 20],
@@ -700,7 +700,7 @@ Plotly.newPlot('myDiv', data, layout);
 
 ```
 #### Contours with Labels
-![[Pasted image 20221017193619.png]]
+![](/Pasted%20image%2020221017193619.png)
 ```javascript
 var data = [ {
   z: [[10, 10.625, 12.5, 15.625, 20],
@@ -727,7 +727,7 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 ```
 #### Contour Lines
-![[Pasted image 20221017193742.png]]
+![](/Pasted%20image%2020221017193742.png)
 ```javascript
 var data = [ {
   z: [[10, 10.625, 12.5, 15.625, 20],
@@ -749,7 +749,7 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 ```
 #### Custom color pallete
-![[Pasted image 20221017194012.png]]
+![](/Pasted%20image%2020221017194012.png)
 ```javascript
 var data = [ {
   z: [[10, 10.625, 12.5, 15.625, 20],
@@ -769,7 +769,7 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 ```
 #### Basic Heatmap
-![[Pasted image 20221017194157.png]]
+![](/Pasted%20image%2020221017194157.png)
 ```javascript
 var data = [
   {
@@ -781,7 +781,7 @@ var data = [
 Plotly.newPlot('myDiv', data);
 ```
 ### Logarithmic Axes
-![[Pasted image 20221017194848.png]]
+![](/Pasted%20image%2020221017194848.png)
 
 ```javascript
 var trace1 = {
@@ -813,7 +813,7 @@ Plotly.newPlot('myDiv', data, layout);
 
 ```
 #### Scatter 3D Plot
-![[Pasted image 20221017195952.png]]
+![](/Pasted%20image%2020221017195952.png)
 ```javascript
 d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv', function(err, rows){
 function unpack(rows, key) {
@@ -856,7 +856,7 @@ Plotly.newPlot('myDiv', data, layout);
 });
 ```
 ### Topographical Surface 3D
-![[Pasted image 20221017200404.png]]
+![](/Pasted%20image%2020221017200404.png)
 ```javascript
 d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
 function unpack(rows, key) {
