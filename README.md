@@ -894,3 +894,233 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 });
 ```
+
+![](/Pasted%20image%2020221019152301.png)
+this is the code
+```javascript
+var x = Array.from({length: 500}, () => Math.random()*(6-3)+3);
+var y = Array.from({length: 500}, () => Math.random()*(4.5-3)+3);
+var x2 = Array.from({length: 500}, () => Math.random()*(6-3)+3);
+var y2 = Array.from({length: 500}, () => Math.random()*(6-4.5)+4.5);
+
+var data = [{
+  x: x,
+  y: y,
+  type: 'scatter',
+  mode: 'markers',
+  opacity: 0.5,
+  marker: {
+    color: 'rgb(17, 157, 255)',
+    size: 20,
+    line: {
+      color: 'rgb(231, 99, 250)',
+      width: 2
+    }
+  },
+  name: 'Opacity 0.5'
+  }, {
+  x: x2,
+  y: y2,
+  type: 'scatter',
+  mode: 'markers',
+  marker: {
+    color: 'rgb(17, 157, 255)',
+    size: 20,
+    line: {
+      color: 'rgb(231, 99, 250)',
+      width: 2
+    }
+  },
+  name: 'Opacity 1.0'
+  }, {
+  x: [2,2],
+  y: [4.25,4.75],
+  type: 'scatter',
+  mode: 'markers',
+  opacity: 0.5,
+  marker: {
+    color: 'rgb(17, 157, 255)',
+    size: 60,
+    line: {
+      color: 'rgb(231, 99, 250)',
+      width: 6
+    }
+  },
+  showlegend: false
+}]
+
+Plotly.newPlot('myDiv', data)
+
+```
+![](/Pasted%20image%2020221019152541.png)
+this is the source code for this example
+```javascript
+var x = Array.from({length: 500}, () => Math.random()*(6-3)+3);
+var y = Array.from({length: 500}, () => Math.random()*(6-3)+3);
+
+var data = [{
+  x: x,
+  y: y,
+  type: 'scatter',
+  mode: 'markers',
+  marker: {
+    color: 'rgb(17, 157, 255)',
+    opacity: 0.5,
+    size: 20,
+    line: {
+      color: 'rgb(231, 99, 250)',
+      width: 2
+    }
+  },
+  showlegend: false
+  }, {
+  x: [2,2],
+  y: [4.25,4.75],
+  type: 'scatter',
+  mode: 'markers',
+  marker: {
+    color: 'rgb(17, 157, 255)',
+    opacity: 0.5,
+    size: 60,
+    line: {
+      color: 'rgb(231, 99, 250)',
+      width: 6
+    }
+  },
+  showlegend: false
+}]
+
+Plotly.newPlot('myDiv', data)
+```
+
+This is also some cool visualisation and I also like the makrer size
+![](/Pasted%20image%2020221019153004.png)
+
+this also looks nice by using a small border around the marker
+![](/Pasted%20image%2020221019153232.png)
+
+alway add a color scale when you need to add colors
+![](/Pasted%20image%2020221019153448.png)
+from [Scatter plots in Python (plotly.com)](https://plotly.com/python/line-and-scatter/)
+
+
+The sunburst
+![](/Pasted%20image%2020221019160223.png)
+this is the code for it
+```javascript
+var data = [
+{
+  "type": "sunburst",
+  "labels": ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+  "parents": ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
+  "values":  [65, 14, 12, 10, 2, 6, 6, 4, 4],
+  "leaf": {"opacity": 0.4},
+  "marker": {"line": {"width": 2}},
+  "branchvalues": 'total'
+}];
+
+var layout = {
+  "margin": {"l": 0, "r": 0, "b": 0, "t": 0},
+};
+
+
+Plotly.newPlot('myDiv', data, layout, {showSendToCloud: true})
+
+myPlot = document.getElementById("myDiv");
+```
+from [Sunburst charts in JavaScript (plotly.com)](https://plotly.com/javascript/sunburst-charts/)
+
+![](/Pasted%20image%2020221019160648.png)
+type of data whch goes into those plots 
+```javascript
+var data = {
+  type: "sankey",
+  orientation: "h",
+  node: {
+    pad: 15,
+    thickness: 30,
+    line: {
+      color: "black",
+      width: 0.5
+    },
+   label: ["A1", "A2", "B1", "B2", "C1", "C2"],
+   color: ["blue", "blue", "blue", "blue", "blue", "blue"]
+      },
+
+  link: {
+    source: [0,1,0,2,3,3],
+    target: [2,3,3,4,4,5],
+    value:  [8,4,2,8,4,2]
+  }
+}
+
+var data = [data]
+
+var layout = {
+  title: "Basic Sankey",
+  font: {
+    size: 10
+  }
+}
+
+Plotly.react('myDiv', data, layout)
+```
+![](/Pasted%20image%2020221019160849.png)
+to have an overlapping graph you can use the following fills where the
+
+tozeroy goes from 0 to the graph and the tonexity goes from a graph to another graph
+```javascript
+
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [0, 2, 3, 5],
+  fill: "tozeroy",
+  type: "scatter",
+  mode: "none",
+};
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [3, 5, 1, 7],
+  fill: "tonexty",
+  type: "scatter",
+  mode: "none",
+};
+```
+
+![](/Pasted%20image%2020221019161208.png)
+Sunburst data looks like the following
+```javascript
+
+{
+  "type": "sunburst",
+  "labels": ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+  "parents": ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
+  "values":  [65, 14, 12, 10, 2, 6, 6, 4, 4],
+  "leaf": {"opacity": 0.4},
+  "marker": {"line": {"width": 2}},
+  "branchvalues": 'total'
+}
+  
+
+var layout = {
+  "margin": {"l": 0, "r": 0, "b": 0, "t": 0},
+};
+```
+
+![](/Pasted%20image%2020221019161457.png)
+type bar asre barcharts which can be done horzontally by setting
+the orientation to "h"
+the x axis as values and the y axis as names
+```javascript
+var data = [
+  {
+    type: "bar",
+    x: [20, 14, 23],
+    y: ["giraffes", "orangutans", "monkeys"],
+    orientation: "h",
+  },
+];
+
+Plotly.newPlot("myDiv", data);
+```
