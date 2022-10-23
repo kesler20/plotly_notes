@@ -3,6 +3,10 @@
 [Plolty.js](https://github.com/plotly/plotly.js) is a javascript library which uses d3 to build cool graphs
 ![](/plotly.png)   
 
+## These are some more advanced examples
+
+https://plotly.com/python/
+
 ## How is plotly structured
 
 
